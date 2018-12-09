@@ -32,6 +32,12 @@
 
   <dependencies>
     <dependency>
+      <groupId>org.apache.hadoop</groupId>
+      <artifactId>hadoop-client</artifactId>
+      <version>2.7.7</version>
+    </dependency>
+
+    <dependency>
       <groupId>org.apache.flink</groupId>
       <artifactId>flink-streaming-scala_2.11</artifactId>
       <version>${flink.version}</version>
@@ -41,11 +47,19 @@
       <artifactId>flink-java</artifactId>
       <version>${flink.version}</version>
     </dependency>
+
     <dependency>
       <groupId>org.apache.flink</groupId>
       <artifactId>flink-streaming-java_2.11</artifactId>
       <version>${flink.version}</version>
     </dependency>
+
+    <dependency>
+      <groupId>org.apache.flink</groupId>
+      <artifactId>flink-connector-kafka-0.9_2.11</artifactId>
+      <version>${flink.version}</version>
+    </dependency>
+
     <dependency>
       <groupId>org.apache.flink</groupId>
       <artifactId>flink-clients_2.11</artifactId>
@@ -61,6 +75,13 @@
       <artifactId>flink-scala_2.11</artifactId>
       <version>${flink.version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.apache.flink</groupId>
+      <artifactId>flink-hadoop-compatibility_2.11</artifactId>
+      <version>1.5.5</version>
+    </dependency>
+
+
   </dependencies>
 
   <build>

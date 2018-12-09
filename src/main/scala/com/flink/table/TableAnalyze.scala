@@ -4,6 +4,10 @@ package com.flink.table
 import org.apache.flink.api.scala.{DataSet, ExecutionEnvironment}
 import org.apache.flink.table.api.{Table, TableEnvironment}
 
+
+
+
+
 /**
   * Created by gjf36 on 2018-11-29.
   */
@@ -24,10 +28,13 @@ object TableAnalyze {
     tableEnv.registerDataSet("A",scorerDS)
     //tableEnv.registerTable("b",a)
 
-   val res: Table =  tableEnv.sqlQuery("select * from A")
+   val result: Table =  tableEnv.sqlQuery("select player,yellowCar from A")
+
+    val res = tableEnv.toDataSet[(String,Int)](result)
+    res.print()
 
 
-    println(res)
+
 
   }
 }
